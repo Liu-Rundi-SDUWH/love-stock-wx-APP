@@ -1,0 +1,33 @@
+<!-- 净资产收益率-->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>数据可视化</view></view>
+</view>
+</view>
+<view class='margin-left text-white text-lg' style="font-size:35rpx">下图为该上市公司近20天内（除去非交易日）的涨跌幅趋势图（数据持续更新中）。点击图片可了解数值详情。</view>
+<view class="pad text-center">
+  <view class="radius shadow-warp margin-top test bg-default biank">
+    <ec-canvas id="jingzich" canvas-id="jingzich" ec="{{ ecBar }}"></ec-canvas>
+  </view>
+</view>
+<!-- 含义 -->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange '></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>指标含义</view></view>
+</view>
+</view>
+<view class="pad text-center">
+<view class="padding-lg radius yinying shadow-lg bg-default margin-top" style="font-size:35rpx">
+  <text><text class="cuIcon-title text-white"></text>股票的涨跌幅是根据前一天的收盘价格来记算的比例。 \r\n</text>
+  <view class="divLine"></view>
+  <text><text class="cuIcon-title text-white"></text>计算公式为：涨跌幅度=(最新价格一昨天收盘价格)÷昨天收盘价格x100% 。</text>
+</view></view>
+
+<!-- 再次诊股 -->
+<view class="padding-sm">
+  <view class="padding-xl flex flex-direction">
+    <button class="cu-btn bg-orange animation-{{animation==item.name+'s'?item.name:''}} animation-reverse lg" bindtap="backsearch" data-class="{{item.name+'s'}}" wx:for="{{list}}" wx:key="index">再次诊股</button>
+  </view>
+</view>

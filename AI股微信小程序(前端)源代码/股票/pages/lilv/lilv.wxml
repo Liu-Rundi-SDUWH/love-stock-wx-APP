@@ -1,0 +1,59 @@
+<!-- 净资产收益率-->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>数据可视化</view></view>
+</view>
+</view>
+<view class='margin-left text-white text-lg' style="font-size:35rpx"><text>以下为该公司的央行利率政策。五条折线分别代表6个月贷款利率，6个月至1年贷款利率，1年至3年贷款利率，3年至5年贷款利率，5年以上贷款利率的走势。\r\n</text> <text>值得一提的是，这里的利率异动表示随政策变化，并非等时间间隔。</text></view>
+
+<view class="pad text-center">
+  <view class="radius shadow-warp margin-top test bg-default biank">
+    <ec-canvas id="jingzich" canvas-id="jingzich" ec="{{ ecBar }}"></ec-canvas>
+  </view>
+</view>
+<!-- 含义 -->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange '></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>指标含义</view></view>
+</view>
+</view>
+<view class="pad text-center">
+<view class="padding-lg radius yinying shadow-lg bg-default margin-top" style="font-size:35rpx">
+  <text><text class="cuIcon-title text-white"></text>利率是决定企业资金成本高低的主要因素，同时也是企业筹资、投资的决定性因素\r\n</text>
+  <view class="divLine"></view>
+  <text><text class="cuIcon-title text-white"></text>主要分为：6个月贷款利率，6个月至1年贷款利率，1年至3年贷款利率，3年至5年贷款利率，5年以上贷款利率。</text>
+</view></view>
+<!-- 计算公式-->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>计算公式</view></view>
+</view>
+</view>
+<view class="pad text-center">
+    <view class="padding-lg radius yinying shadow-lg bg-default margin-top text-bold" style="font-size:36rpx">
+    <text>利率 = 一定时期内利息额/本金</text>
+  </view>
+</view>
+<!-- 分析原则 -->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>分析原则</view></view>
+</view>
+</view>
+<view class="cu-timeline bg-default">
+  <view class="cu-time">仅供参考</view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text>利率提高，贷款利率上升导致公司借贷成本高，收益下降，对这公司的股东来讲，吸引力下降，股价下跌。</view>
+  </view>
+</view>
+
+<!-- 再次诊股 -->
+<view class="padding-sm">
+  <view class="padding-xl flex flex-direction">
+    <button class="cu-btn bg-orange animation-{{animation==item.name+'s'?item.name:''}} animation-reverse lg" bindtap="backsearch" data-class="{{item.name+'s'}}" wx:for="{{list}}" wx:key="index">再次诊股</button>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="box" style='width:100%;min-height:100%;color:white;background-image:url("https://s1.ax1x.com/2020/10/05/0tZMWQ.gif");background-size:100% 100%;'>
+  <view class="search">
+    <navigator url="../search/search">
+      <view class="search-text">
+        <icon class="iconStyle" color="rgba(250, 242, 242, 0.995)" type="search" size="14"></icon>
+        输入股票名称/代码
+      </view>
+    </navigator>
+  </view>
+  <view class="new">
+    <navigator url="../test/test">
+      <view class="search-text">
+        <text class='cuIcon-emoji'></text><text decode="{{true}}">&nbsp;</text>
+        投资者风险测评
+      </view>
+    </navigator>
+  </view>
+</view>
+
+

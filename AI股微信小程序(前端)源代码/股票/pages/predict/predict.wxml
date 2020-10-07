@@ -1,0 +1,27 @@
+<view wx:if="{{show}}">
+<!-- 净资产收益率-->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>涨跌幅预测</view></view>
+</view>
+</view>
+<view class='margin-left text-white text-lg' style="font-size:35rpx"><text>此次预测是利用过去365天该股票收盘价，预测未来60天的股票价格变动情况。\r\n</text>该预测结果仅供参考：</view>
+<view class="pad text-center">
+  <view class="radius shadow-warp margin-top test bg-default biank">
+    <ec-canvas id="jingzich" canvas-id="jingzich" ec="{{ ecBar }}"></ec-canvas>
+  </view>
+</view>
+<!-- 再次诊股 -->
+<view class="padding-sm">
+  <view class="padding-xl flex flex-direction">
+    <button class="cu-btn bg-orange animation-{{animation==item.name+'s'?item.name:''}} animation-reverse lg" bindtap="backsearch" data-class="{{item.name+'s'}}" wx:for="{{list}}" wx:key="index">再次诊股</button>
+  </view>
+</view>
+</view>
+
+<view wx:if="{{!show}}">
+  <view class="bg-default margin-right radius shadow-lg" style="display:flex;align-items:center;">
+    <image src="https://image.weilanwl.com/gif/loading-black.gif" mode="aspectFit"  style="margin-top:220rpx" class="gif-black response"></image>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+<view wx:if="{{show}}">
+<!-- 净资产收益率-->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>数据可视化</view></view>
+</view>
+</view>
+<view class='margin-left text-white text-lg' style="font-size:35rpx">下图为该上市公司90天内（除去非交易日）的日k线图（数据持续更新中）。点击图片可了解数值详情。</view>
+<view class="pad text-center">
+  <view class="radius shadow-warp margin-top test bg-default biank">
+    <ec-canvas id="jingzich" canvas-id="jingzich" ec="{{ ecBar }}"></ec-canvas>
+  </view>
+</view>
+<!-- 含义 -->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange '></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>指标含义</view></view>
+</view>
+</view>
+<view class="pad text-center">
+<view class="padding-lg radius yinying shadow-lg bg-default margin-top" style="font-size:35rpx">
+  <text><text class="cuIcon-title text-white"></text>K线是一条柱状的线条，由影线和实体组成。影线在实体上方的部分叫上影线,下方的部分叫下影线。\r\n</text>
+  <view class="divLine"></view>
+  <text><text class="cuIcon-title text-white"></text>实体分阳线和阴线。其中影线表明当天交易的最高和最低价，实体表明当天的开盘价和收盘价。</text>
+</view></view>
+
+<!-- 分析原则 -->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>分析原则</view></view>
+</view>
+</view>
+<view class="cu-timeline bg-default">
+  <view class="cu-time">仅供参考</view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text><text>【1】阴阳线 \r\n</text> 阴阳代表股价的趋势。在K线图中，阳线表示股价将继续上涨；阴线表示股价继续下跌。</view>
+  </view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text> <text>【2】实体大小\r\n </text>实体大小代表股价运行内在动力。实体越大，上涨或下跌的趋势越明显，反之趋势越不明显。</view>
+  </view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text> <text>【3】影线长短\r\n</text> 影线代表股价反转的信号。无论K线是阳还是阴，向某个方向的影线越长，越不利于股价超整个方向变动。它构成下一阶段股价继续前进的阻力。</view>
+  </view>
+</view>
+
+<!-- 再次诊股 -->
+<view class="padding-sm">
+  <view class="padding-xl flex flex-direction">
+    <button class="cu-btn bg-orange animation-{{animation==item.name+'s'?item.name:''}} animation-reverse lg" bindtap="backsearch" data-class="{{item.name+'s'}}" wx:for="{{list}}" wx:key="index">再次诊股</button>
+  </view>
+</view>
+</view>
+
+<view wx:if="{{!show}}">
+  <view class="bg-default margin-right radius shadow-lg" style="display:flex;align-items:center;">
+    <image src="https://image.weilanwl.com/gif/loading-black.gif" mode="aspectFit"  style="margin-top:220rpx" class="gif-black response"></image>
+  </view>
+</view>

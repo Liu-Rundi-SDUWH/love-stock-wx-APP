@@ -1,0 +1,281 @@
+<view wx:if="{{showans}}">
+<view class="cont">
+  请完成下方的10道题，提交后完成风险测试。
+</view>
+
+<form bindsubmit="formSubmit">
+<!-- 问题一 -->
+    <text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+    <view class="cu-capsule radius" style="margin-left:10rpx" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx">您的工作是：</view>
+    </view>
+  <view class="checkbox-con"> 
+    <radio-group bindchange="radioChange1">
+      <label bindtap="radar12" class="checkbox {{checkValue1 == '由于您是在校学生，收入具有不稳定性；' ? 'checked':''}}">
+        <checkbox value="由于您是在校学生，收入具有不稳定性；"></checkbox>
+        <text> 在校学生 </text>
+      </label>
+      <label bindtap="radar14" class="checkbox {{checkValue1 == '您工作稳定；'? 'checked':''}}">
+        <checkbox value="您工作稳定；"></checkbox>
+        <text> 党政机关及事业单位 </text>
+      </label>
+      <label bindtap="radar13" class="checkbox {{checkValue1 == '工作比较稳定,' ? 'checked':''}}">
+        <checkbox value="工作比较稳定,"></checkbox>
+        <text> 一般企业单位 </text>
+      </label>
+      <label bindtap="radar12" class="checkbox {{checkValue1 == '您的工作比较稳定,' ? 'checked':''}}">
+        <checkbox value="您的工作比较稳定,"></checkbox>
+        <text>蓝领 </text>
+      </label>
+      <label bindtap="radar11" class="checkbox {{checkValue1 == '由于您是自由职业，收入具有不确定性,' ? 'checked':''}}">
+        <checkbox value="由于您是自由职业，收入具有不确定性,"></checkbox>
+        <text>自由职业 </text>
+      </label>
+      <label bindtap="radar11" class="checkbox {{checkValue1 == '由于您无固定职业，收入具有不确定性,' ? 'checked':''}}">
+        <checkbox value="由于您无固定职业，收入具有不确定性,"></checkbox>
+        <text>无固定职业 </text>
+      </label>
+    </radio-group>
+  </view>
+  <!-- 问题二 -->
+     <text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+    <view class="cu-capsule radius" style="margin-left:10rpx" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx">您的收入主要来自：</view>
+    </view>
+  <view class="checkbox-con"> 
+    <radio-group bindchange="radioChange2">
+      <label class="checkbox0 {{checkValue2 == '工资奖金、劳务报酬' ? 'checked':''}}">
+        <checkbox value="工资奖金、劳务报酬"></checkbox>
+        <text> 工资奖金、劳务报酬 </text>
+      </label>
+      <label class="checkbox0 {{checkValue2 == '生产经营所得'? 'checked':''}}">
+        <checkbox value="生产经营所得"></checkbox>
+        <text> 生产经营所得 </text>
+      </label>
+      <label class="checkbox0 {{checkValue2 == '利息、股息、转让等金融性资产收入' ? 'checked':''}}">
+        <checkbox value="利息、股息、转让等金融性资产收入"></checkbox>
+        <text> 利息、股息、转让等金融性资产收入 </text>
+      </label>
+      <label class="checkbox0 {{checkValue2 == '出租、出售房地产等非金融性资产收入' ? 'checked':''}}">
+        <checkbox value="出租、出售房地产等非金融性资产收入"></checkbox>
+        <text>出租、出售房地产等非金融性资产收入 </text>
+      </label>
+      <label class="checkbox0 {{checkValue2 == '其他' ? 'checked':''}}">
+        <checkbox value="其他"></checkbox>
+        <text>其他 </text>
+      </label>
+    </radio-group>
+  </view>
+<!-- 问题三 -->
+<text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+    <view class="cu-capsule radius" style="margin-left:10rpx" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx">家庭可支配年收入为（折合为人民币）：</view>
+    </view>
+  <view class="checkbox-con"> 
+    <radio-group bindchange="radioChange3">
+      <label bindtap="radar31" class="checkbox {{checkValue3 == '财富水平上仍待提高，需要继续积累；' ? 'checked':''}}">
+        <checkbox value="财富水平上仍待提高，需要继续积累；"></checkbox>
+        <text> 5万及以下 </text>
+      </label>
+      <label bindtap="radar32" class="checkbox {{checkValue3 == '财富水平上有待提高，需要继续积累；'? 'checked':''}}">
+        <checkbox value="财富水平上有待提高，需要继续积累；"></checkbox>
+        <text> 5万-10万 </text>
+      </label>
+      <label bindtap="radar32" class="checkbox {{checkValue3 == '家境还不错；' ? 'checked':''}}">
+        <checkbox value="家境还不错；"></checkbox>
+        <text> 10万-30万 </text>
+      </label>
+      <label bindtap="radar33" class="checkbox {{checkValue3 == '家境不错；' ? 'checked':''}}">
+        <checkbox value="家境不错；"></checkbox>
+        <text>30万-50万 </text>
+      </label>
+      <label bindtap="radar33" class="checkbox {{checkValue3 == '家境殷实；' ? 'checked':''}}">
+        <checkbox value="家境殷实；"></checkbox>
+        <text>50万-100万 </text>
+      </label>
+            <label bindtap="radar34" class="checkbox {{checkValue3 == '家境优渥；' ? 'checked':''}}">
+        <checkbox value="家境优渥；"></checkbox>
+        <text>100万以上 </text>
+      </label>
+    </radio-group>
+  </view>
+<!-- 问题四 -->
+<text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+<view class="cu-capsule radius" style="margin-left:10rpx" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx">您每月的钱主要花在了（可多选）：</view>
+    </view>
+  <view class='checkbox-con'>
+    <checkbox-group bindchange="checkboxChange">
+      <label class="{{item.checked?'checkbox checked':'checkbox'}}" wx:for="{{checkboxArr1}}" bindtap='checkbox' data-index="{{index}}" wx:key="key">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+      </label>
+    </checkbox-group>
+  </view>
+<!-- 问题五 -->
+<text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+<view class="cu-capsule radius" style="margin-left:10rpx" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx">您投资中可耐受何种程度的风险波动？</view>
+    </view>
+  <view class="checkbox-con"> 
+    <radio-group bindchange="radioChange5">
+      <label bindtap="radar41" class="checkbox {{checkValue5 == '在理财中偏好较低风险；'? 'checked':''}}">
+        <checkbox value="在理财中偏好较低风险；"></checkbox>
+        <text> 中低 </text>
+      </label>
+      <label bindtap="radar42" class="checkbox {{checkValue5 == '在理财中偏好中等风险；' ? 'checked':''}}">
+        <checkbox value="在理财中偏好中等风险；"></checkbox>
+        <text> 中 </text>
+      </label>
+      <label bindtap="radar43" class="checkbox {{checkValue5 == '在理财中偏好较高风险；' ? 'checked':''}}">
+        <checkbox value="在理财中偏好较高风险；"></checkbox>
+        <text>中高 </text>
+      </label>
+      <label bindtap="radar44" class="checkbox {{checkValue5 == '在理财中偏好高风险产品；' ? 'checked':''}}">
+        <checkbox value="在理财中偏好高风险产品；"></checkbox>
+        <text>高 </text>
+      </label>
+    </radio-group>
+  </view>
+<!-- 问题六 -->
+<text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+<view class="cu-capsule radius" style="margin-left:10rpx" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx">您的投资目标是：</view>
+    </view>
+  <view class="checkbox-con"> 
+    <radio-group bindchange="radioChange6">
+    <label class="checkbox0 {{checkValue6 == '追求一定的收益，可以承担一定的投资风险。' ? 'checked':''}}">
+        <checkbox value="追求一定的收益，可以承担一定的投资风险。"></checkbox>
+        <text> 追求一定的收益，可以承担一定的投资风险； </text>
+      </label>
+      <label class="checkbox0 {{checkValue6 == '在理财中偏好中等风险。' ? 'checked':''}}">
+        <checkbox value="在理财中偏好中等风险；"></checkbox>
+        <text> 追求较多收益产生，可以承担较大的投资风险； </text>
+      </label>
+      <label class="checkbox0 {{checkValue6 == '在理财中可承受较高风险。' ? 'checked':''}}">
+        <checkbox value="在理财中可承受较高风险。"></checkbox>
+        <text>实现资产大幅增长，愿意承担很大的投资风险； </text>
+      </label>
+      <label class="checkbox0 {{checkValue6 == '在理财中注重本金的安全和稳定。' ? 'checked':''}}">
+        <checkbox value="在理财中注重本金的安全和稳定。"></checkbox>
+        <text>尽可能保证本金安全，不在乎收益率比较低； </text>
+      </label>
+    </radio-group>
+  </view>
+
+<!-- 问题七 -->
+<text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+<view class="cu-capsule radius" style="margin-left:10rpx" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx">您可接受的最长投资年限为：</view>
+    </view>
+  <view class="checkbox-con"> 
+    <radio-group bindchange="radioChange7">
+      <label class="checkbox {{checkValue7 == '不固定' ? 'checked':''}}">
+        <checkbox value="不固定"></checkbox>
+        <text> 不固定 </text>
+      </label>
+      <label class="checkbox {{checkValue7 == '1年以内' ? 'checked':''}}">
+        <checkbox value="1年以内"></checkbox>
+        <text> 1年以内 </text>
+      </label>
+      <label class="checkbox {{checkValue7 == '1-3年' ? 'checked':''}}">
+        <checkbox value="1-3年"></checkbox>
+        <text>1-3年 </text>
+      </label>
+      <label class="checkbox {{checkValue7 == '3年以上' ? 'checked':''}}">
+        <checkbox value="3年以上"></checkbox>
+        <text>3年以上 </text>
+      </label>
+    </radio-group>
+  </view>
+
+  <!-- 问题八 -->
+  <text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+  <view class="cu-capsule radius" style="margin-left:10rpx" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx">你想投资什么产品（可多选）：</view>
+    </view>
+  <view class='checkbox-con'>
+    <checkbox-group bindchange="checkboxChange2">
+      <label class="{{item.checked?'checkbox2 checked':'checkbox'}}" wx:for="{{checkboxArr2}}" bindtap='checkbox2' data-index="{{index}}" wx:key="key">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+      </label>
+    </checkbox-group>
+  </view>
+<!-- 问题九 -->
+<text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+<view class="cu-capsule radius" style="margin-left:10rpx" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx">您有多少年的理财经验？</view>
+    </view>
+  <view class="checkbox-con"> 
+    <radio-group bindchange="radioChange9">
+      <label bindtap="radar51" class="checkbox {{checkValue9 == '你的理财经验较少，所以建议从风险较低的理财产品开始♪(･ω･)ﾉ' ? 'checked':''}}">
+        <checkbox value="你的理财经验较少，所以建议从风险较低的理财产品开始♪(･ω･)ﾉ"></checkbox>
+        <text> 1年以下 </text>
+      </label>
+      <label bindtap="radar52" class="checkbox {{checkValue9 == '您有一些理财经验，所以可以尝试一下有一定风险的投资♪(･ω･)ﾉ' ? 'checked':''}}">
+        <checkbox value="您有一些理财经验，所以可以尝试一下有一定风险的投资♪(･ω･)ﾉ"></checkbox>
+        <text>1-3年 </text>
+      </label>
+      <label bindtap="radar53" class="checkbox {{checkValue9 == '您的理财经验较为丰富，所以我们相信您有一定的理财能力，因此可以选择有风险性的理财产品进行投资♪(･ω･)ﾉ' ? 'checked':''}}">
+        <checkbox value="您的理财经验较为丰富，所以我们相信您有一定的理财能力，因此可以选择有风险性的理财产品进行投资♪(･ω･)ﾉ"></checkbox>
+        <text>3-5年 </text>
+      </label>
+      <label bindtap="radar54" class="checkbox {{checkValue9 == '您的理财经验已经非常丰富，相信在您的理财过程中已经总结出了一些经验，所以您可以根据自己的理财经验合理的选择理财产品进行投资♪(･ω･)ﾉ' ? 'checked':''}}">
+        <checkbox value="您的理财经验已经非常丰富，相信在您的理财过程中已经总结出了一些经验，所以您可以根据自己的理财经验合理的选择理财产品进行投资♪(･ω･)ﾉ"></checkbox>
+        <text>5年以上 </text>
+      </label>
+    </radio-group>
+  </view>
+  <!-- 问题十 -->
+  <text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+  <view class="cu-capsule radius" style="margin-left:10rpx" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx">您的理财经验有哪些（可多选）？</view>
+    </view>
+  <view class='checkbox-con'>
+    <checkbox-group bindchange="checkboxChange3">
+      <label class="{{item.checked?'checkbox0 checked':'checkbox0'}}" wx:for="{{checkboxArr3}}" bindtap='checkbox3' data-index="{{index}}" wx:key="key">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+      </label>
+    </checkbox-group>
+  </view>
+  <button form-type="submit">提交</button>
+</form>
+</view>
+
+<view wx:else>
+<view class="cont">
+  您的风险测试结果如下，该结果仅供参考。
+</view>
+<!-- 雷达图 -->
+<view class="container">
+  <ch-canvas canvasId='radar' id='radar'></ch-canvas>
+</view>
+<!-- 结果 -->
+<view class="answer">
+<view>
+  <text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+    <view class="cu-capsule radius" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx;margin-left: 30rpx">我的风险类型</view>
+    </view>
+    <view class="leixing" wx:if="{{checkValue5 == '在理财中偏好较低风险；'}}"><text>稳健型</text></view>
+    <view class="leixing" wx:if="{{checkValue5 == '在理财中偏好中等风险；'}}"><text>平稳型</text></view>
+    <view class="leixing" wx:if="{{checkValue5 == '在理财中偏好较高风险；'}}"><text>成长型</text></view>
+    <view class="leixing" wx:if="{{checkValue5 == '在理财中偏好高风险产品；'}}"><text>风险型</text></view>
+
+    <text class="bg-white" style="width:4rem"></text>
+</view>
+<view>
+  <text class="cuIcon-title text-orange" style="margin-left: 30rpx" ></text>
+    <view class="cu-capsule radius" >
+      <view class='cu-tag bg-orange' style="font-size: 35rpx;margin-left: 30rpx">风险类型分析</view>
+    </view>
+    <view style="color:white"wx:if="{{checkValue4.length == 0}}" class="fenxi">亲，您当前处于人生奋斗期~{{checkValue1}}{{checkValue3}}目前您没有任何负债；{{checkValue5}}{{checkValue6}}{{checkValue9}}</view></view>
+<view style="color:white"wx:if="{{checkValue4.length == 1}}" class="fenxi">亲，您当前处于人生奋斗期~{{checkValue1}}{{checkValue3}}负债不多；{{checkValue5}}{{checkValue6}}{{checkValue9}}</view>
+
+<view style="color:white"wx:if="{{checkValue4.length == 2}}" class="fenxi">亲，您当前处于人生奋斗期~{{checkValue1}}{{checkValue3}}每月有一些负债需要还；{{checkValue5}}{{checkValue6}}{{checkValue9}}</view>
+
+<view style="color:white"wx:if="{{checkValue4.length == 3}}" class="fenxi">亲，您当前处于人生奋斗期~{{checkValue1}}{{checkValue3}}但是您背了不少负债；{{checkValue5}}{{checkValue6}}{{checkValue9}}</view>
+
+<view style="color:white"wx:if="{{checkValue4.length == 4}}" class="fenxi">亲，您当前处于人生奋斗期；{{checkValue1}}{{checkValue3}}每月需要还不少负债；{{checkValue5}}{{checkValue6}}{{checkValue9}}</view>
+</view>
+</view>
+

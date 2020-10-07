@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ch-canvas": "../../ch-canvas/ch-canvas"
+  }
+}

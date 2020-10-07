@@ -1,0 +1,43 @@
+<!-- 净资产收益率-->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>数据可视化</view></view>
+</view>
+</view>
+<view class='margin-left text-white text-lg' style="font-size:35rpx">货币供应量属于资金面指标，它反映整个社会的资金的宽裕程度。下图为2020年以来各月的货币供应量趋势图，点击可了解数值详情。</view>
+<view class="pad text-center">
+  <view class="radius shadow-warp margin-top test bg-default biank">
+    <ec-canvas id="jingzich" canvas-id="jingzich" ec="{{ ecBar }}"></ec-canvas>
+  </view>
+</view>
+<!-- 含义 -->
+<view class="cu-bar bg-default solid-bottom">
+<view class='action'>
+  <text class='cuIcon-titles text-orange '></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>指标含义</view></view>
+</view>
+</view>
+<view class="pad text-center">
+<view class="padding-lg radius yinying shadow-lg bg-default margin-top" style="font-size:35rpx">
+  <text><text class="cuIcon-title text-white"></text>货币供应量，亦称货币存量、货币供应，指某一时点流通中的现金量和存款量之和。\r\n</text>
+</view></view>
+<!-- 分析原则 -->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>分析原则</view></view>
+</view>
+</view>
+<view class="cu-timeline bg-default">
+  <view class="cu-time">仅供参考</view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text>国家实行扩张的财政政策，降低银行利率，使得货币供给量大量增加。货币流通过剩，必然有一大部分流入股市，带动股市的上涨。</view>
+  </view>
+</view>
+<!-- 再次诊股 -->
+<view class="padding-sm">
+  <view class="padding-xl flex flex-direction">
+    <button class="cu-btn bg-orange animation-{{animation==item.name+'s'?item.name:''}} animation-reverse lg" bindtap="backsearch" data-class="{{item.name+'s'}}" wx:for="{{list}}" wx:key="index">再次诊股</button>
+  </view>
+</view>

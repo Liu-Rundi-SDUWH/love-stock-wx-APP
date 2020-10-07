@@ -1,0 +1,66 @@
+<!-- 净资产收益率-->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>数据可视化</view></view>
+</view>
+</view>
+<view class='margin-left text-white text-lg' style="font-size:35rpx">下图为该上市公司2018年至2020年第二季度的净资产收益率柱状图（数据持续更新中）。点击柱状图可了解各季度详情。</view>
+<view class="pad text-center">
+  <view class="radius shadow-warp margin-top test bg-default biank">
+    <ec-canvas id="jingzich" canvas-id="jingzich" ec="{{ ecBar }}"></ec-canvas>
+  </view>
+</view>
+<!-- 含义 -->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange '></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>指标含义</view></view>
+</view>
+</view>
+<view class="pad text-center">
+<view class="padding-lg radius yinying shadow-lg bg-default" style="font-size:35rpx">
+  <text><text class="cuIcon-title text-white"></text>净资产收益率，又称股东权益报酬率、净值报酬率、权益报酬率、权益利润率、净资产利润率，是衡量上市公司盈利能力的重要指标。\r\n</text>
+  <view class="divLine"></view>
+  <text><text class="cuIcon-title text-white"></text>如果一个公司长期的ROE保持15%以上，基本上可以算作一个好公司。</text>
+</view></view>
+<!-- 计算公式-->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>计算公式</view></view>
+</view>
+</view>
+<view class="pad text-center">
+    <view class="padding-lg radius yinying shadow-lg bg-default text-bold" style="font-size:36rpx">
+      净资产收益率 = 净利润 / 净资产</view>
+</view>
+<!-- 分析原则 -->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>分析原则</view></view>
+</view>
+</view>
+<view class="cu-timeline bg-default">
+  <view class="cu-time">仅供参考</view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text>【1】净资产收益率越大，一般该公司盈利能力越大。</view>
+  </view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text>【2】在使用净资产收益时，要参考行业差别。互联网等快速发展、快速盈利的行业一般净资产收益较大。</view>
+  </view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text>【3】在使用净资产收益时，要结合该公司的成长阶段，一个公司的成长阶段分为：初创期、成长期、成熟期、衰落期。一般成熟期该公司的净资产收益率较大。</view>
+  </view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text>【4】净资产收益率仅反映企业现在和以前的盈利能力，不可作为预测未来的主要依据。</view>
+  </view>
+</view>
+
+<!-- 再次诊股 -->
+<view class="padding-sm">
+  <view class="padding-xl flex flex-direction">
+    <button class="cu-btn bg-orange animation-{{animation==item.name+'s'?item.name:''}} animation-reverse lg" bindtap="backsearch" data-class="{{item.name+'s'}}" wx:for="{{list}}" wx:key="index">再次诊股</button>
+  </view>
+</view>

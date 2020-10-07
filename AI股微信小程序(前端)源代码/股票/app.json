@@ -1,0 +1,23 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/predict/predict",
+    "pages/feeling/feeling",
+    "pages/lilv/lilv",
+    "pages/jingzich/jingzich",
+    "pages/rik/rik",
+    "pages/huobi/huobi",
+    "pages/shiy/shiy",
+    "pages/zhangfu/zhangfu",
+    "pages/search/search",
+    "pages/test/test",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#191232",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

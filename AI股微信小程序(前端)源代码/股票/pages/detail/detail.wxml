@@ -1,0 +1,50 @@
+<view wx:if="{{show}}">
+<view class="padding">
+  <view class="grid col-{{3}} margin-bottom text-center text-lg bg-default shadow">
+    <view class="padding">{{text}}</view>
+    <view class="padding">最新价</view>
+    <view class="padding">最新涨跌幅</view>
+    <view class="padding">{{number}}</view>
+    <view class="padding text-red">{{price}}</view>
+    <view class="padding text-red">{{zhangfu_new}}%</view>
+  </view>
+</view>
+<view class="container">
+  <ch-canvas canvasId='radar' id='radar'></ch-canvas>
+</view>
+<scroll-view scroll-x class="text-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-yellow cur':''}}" wx:for="{{tabs}}" wx:key="key" bindtap="tabSelect" data-id="{{index}}">
+      {{item}}
+    </view>
+  </view>
+</scroll-view>
+
+
+<view wx:if="{{TabCur==0}}">
+<view class='nav-list' style="margin-top:40rpx"> 
+<navigator hover-class='none' url="/pages/{{item.shifan}}/{{item.shifan}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key="key">
+<view class="nav-title">{{item.title}}</view>
+<view class="nav-name">{{item.name}}</view>
+<text class='cuIcon-{{item.icon}}'></text>
+</navigator>
+</view></view>
+
+<view wx:if="{{TabCur==1}}">
+<view class='nav-list' style="margin-top:40rpx"> 
+<navigator hover-class='none' url="/pages/{{item.shifan}}/{{item.shifan}}" class="nav-li bg-{{item.color}}" wx:for="{{ai}}" wx:key="key">
+<view class="nav-title">{{item.title}}</view>
+<view class="nav-name">{{item.name}}</view>
+<text class='cuIcon-{{item.icon}}'></text>
+</navigator>
+</view></view></view>
+
+<view wx:if="{{!show && !none}}">
+  <view class="bg-default margin-right radius shadow-lg" style="display:flex;align-items:center;">
+    <image src="https://image.weilanwl.com/gif/loading-black.gif" mode="aspectFit"  style="margin-top:220rpx" class="gif-black response"></image>
+  </view>
+</view>
+
+
+
+

@@ -1,0 +1,71 @@
+<!-- 净资产收益率-->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>数据可视化</view></view>
+</view>
+</view>
+<view class='margin-left text-white text-lg' style="font-size:35rpx">下图为该上市公司近20天内（除去非交易日）的市盈率与市净率趋势图（数据持续更新中）。点击图片可了解数值详情。</view>
+<view class="pad text-center">
+  <view class="radius shadow-warp margin-top test bg-default biank">
+    <ec-canvas id="jingzich" canvas-id="jingzich" ec="{{ ecBar }}"></ec-canvas>
+  </view>
+</view>
+<!-- 含义 -->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange '></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>指标含义</view></view>
+</view>
+</view>
+<view class="pad text-center">
+<view class="padding-lg radius yinying shadow-lg bg-default margin-top" style="font-size:35rpx">
+  <text><text class="cuIcon-title text-white"></text>市盈率，也称“本益比”、“股价收益比率”或“市价盈利比率”。通俗地说，市盈率代表你以当前该证券的价格购买该证券后，以当前证券的每股盈余计算， 购买成本返回的年数。\r\n</text>
+  <view class="divLine"></view>
+  <text><text class="cuIcon-title text-white"></text>市净率指每股股价与每股净资产的比率，特别在评估高风险企业，企业资产大量为实物资产的企业时受到重视。</text>
+</view></view>
+<!-- 计算公式-->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>计算公式</view></view>
+</view>
+</view>
+<view class="pad text-center">
+    <view class="padding-lg radius yinying shadow-lg bg-default margin-top text-bold" style="font-size:36rpx">
+    <text>市盈率 = 股票价格 / 每股收益 \r\n</text>
+    <text>市净率 = 每股股价 / 每股净资产 </text>
+  </view>
+</view>
+<!-- 分析原则 -->
+<view class="cu-bar bg-default solid-bottom margin-top">
+<view class='action'>
+  <text class='cuIcon-titles text-orange'></text>
+  <view class="cu-capsule radius"><view class='cu-tag bg-orange'>分析原则</view></view>
+</view>
+</view>
+<view class="cu-timeline bg-default">
+  <view class="cu-time">仅供参考</view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text>【1】市盈率越大，一般说明该股票泡沫越大，越不值得购买。</view>
+  </view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text>【2】不同行业的市盈率差别一般较大，传统行业比如钢铁、银行市盈率较低，而新兴行业如互联网、新能源市盈率一般较高。</view>
+  </view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text>【3】市净率越低，一般表示投资价值越高。</view>
+  </view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text>【4】相比于市盈率，市净率更加稳定。</view>
+  </view>
+  <view class="cu-item text-orange">
+    <view class="bg-default content yinying"><text></text>【4】市净率适用于钢铁电子等实体产业，不适用于互联网等无实体的行业。</view>
+  </view>
+</view>
+
+<!-- 再次诊股 -->
+<view class="padding-sm">
+  <view class="padding-xl flex flex-direction">
+    <button class="cu-btn bg-orange animation-{{animation==item.name+'s'?item.name:''}} animation-reverse lg" bindtap="backsearch" data-class="{{item.name+'s'}}" wx:for="{{list}}" wx:key="index">再次诊股</button>
+  </view>
+</view>

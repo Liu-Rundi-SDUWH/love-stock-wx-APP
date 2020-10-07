@@ -1,0 +1,40 @@
+page{
+  background-color:#191232;
+  font-size:35rpx
+}
+
+.pad{
+  padding: 0rpx 30rpx;
+}
+
+ec-canvas {
+  width: 100%;
+  height: 50%;
+}
+
+.test{
+  height: 550rpx;
+  width: 100%;
+}
+
+.biank{
+  box-shadow: 0px 0px 4px #ccbb02f3 inset;
+}
+
+.bottom{
+  margin-top: 30rpx;
+}
+
+.yinying{
+  border-style: solid;
+  border-width: 0rpx;
+  box-shadow: 0px 0px 10px rgba(49, 181, 204, 0.959) inset;
+}
+
+.divLine{
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  background: #b8bbb9b2;
+  width: 100%;
+  height: 5rpx;
+ }

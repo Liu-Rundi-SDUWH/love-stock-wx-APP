@@ -1,0 +1,23 @@
+<view class="main">
+  <view class="search-box">
+    <input class="search-input" confirm-type="search" placeholder="搜索" value="{{value}}" bindconfirm="searchInput" />
+    <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
+  </view>
+
+    <view>
+      <view class="title">
+        <text>诊股历史</text>
+      </view>
+      <view class="tags">
+        <text wx:for="{{history}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="title">
+      <text>热门股票</text>
+    </view>
+    <view class="tags">
+      <text wx:for="{{hot}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle">{{item}}</text>
+    </view>
+  
+</view>
